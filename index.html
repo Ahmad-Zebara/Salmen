@@ -1,612 +1,446 @@
-/* General Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background: url(pexels-anna-nekrashevich-8533348.jpg);
-    font-family: Arial, sans-serif;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
- /* General Section Styling */
-.service {
-    padding: 50px 0;
-    background-color: #f9f9f9;
-    text-align: center;
-  }
-  
-  .grid-layout {
-    margin: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 20px; /* Spacing between the cards */
-    position: relative;
-  }
-  
-  .service-card {
-    position: relative;
-    width: 350px;
-    height: 250px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .left-card, .right-card {
-    align-self: flex-start; /* Keep side cards aligned to the top */
-  }
-  
-  .middle-card {
-    align-self: flex-end; /* Middle card is lower */
-  }
-  .about-us-container {
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-    height: 50vh; /* Full height of the viewport or parent container */
-  }
-  
-  .about-us-box {
-    background-color: #d3d3d3; /* Light gray background */
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-  }
-  /* Card Hover Effect */
-  .service-card:hover {
-    transform: scale(1.05); /* Slight zoom effect */
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Add shadow */
-  }
-  
-  .service-card .card-banner::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 150%;
-    background: rgba(255, 255, 255, 0.3); /* Shiny glass effect */
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  
-  .service-card:hover .card-banner::after {
-    opacity: 1; /* Shine effect becomes visible on hover */
-  }
-  .scroll-container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.scroll-items {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    width: 90%;
-    padding: 10px;
-}
-
-.scroll-items::-webkit-scrollbar {
-    display: none;
-}
-
-.item {
-    flex: 0 0 auto; /* Prevent shrinking or growing */
-    width: 180px; /* Fixed width for items */
-    display: flex;
-    flex-direction: column; /* Stack content vertically */
-    align-items: center;
-    background: #f9f9f9; /* Box background color */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    overflow: hidden; /* Ensure items stay inside the box */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.item-img-box {
-    width: 100%;
-    height: 130px; /* Fixed height for images */
-    background-color: #ddd; /* Placeholder background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.item-img {
-    width: 100%; /* Fit image to box */
-    height: 100%;
-    object-fit: cover; /* Maintain image aspect ratio */
-}
-
-.item-name-box {
-    width: 100%;
-    padding: 10px;
-    text-align: center;
-    background-color: #fff; /* Background for name box */
-    border-top: 1px solid #ddd; /* Divider line */
-}
-
-.item-name {
-    font-size: 1em;
-    font-weight: bold;
-    color: #333;
-    margin: 0;
-}
-
-.item-price-box {
-    width: 100%;
-    padding: 10px;
-    text-align: center;
-    background-color: #f5f5f5; /* Background for price box */
-    border-top: 1px solid #ddd; /* Divider line */
-}
-
-.item-price {
-    font-size: 0.9em;
-    font-weight: bold;
-    color: #555;
-    margin: 0;
-}
-
-.item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
-  /* Card Content Styling */
-  .card-content {
-    padding: 15px;
-    background-color: #fff;
-    text-align: center;
-  }
-  
-  .card-title a {
-    color: #333;
-    font-size: 1.2em;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  
-  .btn-text {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 0.9em;
-  }
-  
-  .btn-text:hover {
-    text-decoration: underline;
-  }
-/* Sidebar */
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 250px;
-    height: 100%;
-    background-color: #333;
-    color: white;
-    overflow-y: auto;
-    transition: left 0.3s ease-in-out;
-    z-index: 1000;
-    padding: 20px;
-}
-
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar li {
-    margin: 15px 0;
-}
-
-.sidebar a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.sidebar a:hover {
-    color: #ddd;
-}
-.slider-bg {
-    position: relative;
-    width: 1400px;
-    height: 450px;
-    overflow: hidden;
-}
-
-.img-cover {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease; /* Smooth zoom effect */
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 1; /* Keep visible */
-    transition: opacity 0.3s ease; /* Smooth fade-in/out effect */
-}
-
-.overlay-text {
-    color: white;
-    font-size: 2em;
-    font-weight: bold;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Arial', sans-serif; /* Clean font style */
-}
-
-.slider-bg:hover .overlay {
-    opacity: 0.7; /* Slightly increase the overlay effect on hover */
-}
-
-.slider-bg:hover .img-cover {
-    transform: scale(1.05); /* Zoom in the image slightly on hover */
-}
-.open-btn,
-.close-btn {
-    font-size: 24px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
-.open-btn {
-    color: #333;
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 1001;
-}
-
-/* Main Content */
-.main-content {
-    margin-left: 0;
-    padding: 20px;
-    text-align: center;
-}
-
-/* Search Bar */
-.search-container {
-    margin: 50px 0;
-}
-
-.search-container input {
-    padding: 10px;
-    width: 60%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-/* Links */
-.links-container {
-    margin: 20px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.links-container a {
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.links-container a:hover {
-    background-color: #555;
-    transform: scale(1.1);
-}
-/* === Services Section === */
-.services-section {
-    background-color: #4e4e4e;
-    padding: 50px 70px;
-    text-align: center;
-}
-
-.services {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
-.service {
-    background-color: #6b6b6b;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service img {
-    background-color: #ddd;
-    margin: 50px;
-    width: 300px;
-    height: 200px;
-    border-radius: 10px;
-    object-fit: cover;
-}
-.ser{
-    padding: 30px;
-    color: #ffffff;
-}
-.p{
-    color: #ccc;
-}
-
-.service:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-/* Sections */
-section {
-    align-items: center;
-    align-content: center;
-    height: 500px;
-    margin: 50px 0;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-}
-
-/* Section 1: Responsive Design */
-#section1 {
-    background-color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: auto;
-    padding: 50px;
-    text-align: center;
-}
-
-#section1 .slider-bg {
-    position: relative;
-    width: 90%; /* Adjusts to fit smaller screens */
-    height: auto; /* Maintains aspect ratio */
-    max-width: 1200px; /* Limits maximum width */
-    overflow: hidden;
-}
-
-#section1 .img-cover {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-#section1 h1.overlay-text {
-    font-size: 2em;
-    padding: 10px;
-    color: #fff;
-}
-
-
-#section2{
-    background-color: #8f8f8f;
-}
-
-section h2 {
-    height: 80px;
-    margin-bottom: 10px;
-    font-size: 24px;
-}
-
-section p {
-    font-size: 16px;
-}
-
-/* Sale Section Styling */
-.section3 {
-    padding: 50px;
-    background: url();
-    text-align: center;
-    position: relative;
-} 
-
-.section3 h2 {
-    font-size: 32px;
-    color: #ffffff;
-    margin-bottom: 20px;
-}
-
-.scroll-container {
-    position: relative;
-    overflow: hidden; /* Hide overflowing items */
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.scroll-items {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto; /* Enables horizontal scrolling */
-    scroll-behavior: smooth; /* Smooth scrolling effect */
-    width: 90%; /* Container width */
-    padding: 10px;
-    margin: 0 auto;
-}
-
-.scroll-items::-webkit-scrollbar {
-    display: none; /* Hides the scrollbar for cleaner UI */
-}
-
-.item {
-    flex: 0 0 auto; /* Prevent shrinking or growing */
-    background: #ddd;
-    width: 150px; /* Fixed width for items */
-    height: 200px; /* Fixed height for items */
-    text-align: center;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.item:hover {
-    transform: scale(1.05);
-    background-color: #e0e0e0;
-}
-
-/* Scroll Buttons */
-.scroll-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #a3a3a3;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 18px;
-    cursor: pointer;
-    border-radius: 5px;
-    z-index: 1;
-}
-
-
-.scroll-btn:hover {
-    background-color: #252d3d;
-}
-.scroll-items::-webkit-scrollbar {
-    display: none; /* Hides the scrollbar for cleaner UI */
-}
-.left-btn {
-    left: 10px;
-}
-
-.right-btn {
-    right: 10px;
-}
-
-.section4 {
-    padding: 50px;
-    background-color: #ffffff;
-    text-align: center;
-    position: relative;
-}
-
-.section4 h2 {
-    font-size: 32px;
-    color: #000000;
-    margin-bottom: 20px;
-}
-
-.section4 {
-    padding: 50px;
-    background-color: #000000;
-    text-align: center;
-    position: relative;
-}
-
-.section4 h2 {
-    font-size: 32px;
-    color: #ffffff;
-    margin-bottom: 20px;
-}
-
-.section5{
-    background-color: #000000;
-}
-
-/* === Categories Section === */
-.section5{
-    font-size: 32px;
-    color: #ffffff;
-    margin-bottom: 20px;
-}
-.section6 {
-    text-align: center;
-    padding: 30px;
-    background-color: #8f8f8f;
-}
-
-.section6 h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #fff;
-}
-
-.categories {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-
-.category {
-    background-color: #ddd;
-    padding: 20px;
-    border-radius: 5px;
-    width: 100%;
-    max-width: 250px;
-    text-align: center;
-    font-size: 1.2em;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.category:hover {
-    transform: scale(1.1);
-    background-color: #ccc;
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    #section1 h1.overlay-text {
-        font-size: 1.5em;
-    }
-
-    .categories {
-        gap: 10px;
-    }
-
-    .category {
-        font-size: 1em;
-        max-width: 200px;
-    }
-}
-
-@media (max-width: 480px) {
-    #section1 h1.overlay-text {
-        font-size: 1.2em;
-    }
-
-    .category {
-        font-size: 0.9em;
-        max-width: 150px;
-    }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    <link rel="stylesheet" href="v.css">
+</head>
+
+
+    <!-- Sidebar -->
+    <nav id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">✖</button>
+        <ul>
+            <a href="#section1" class="section1">Section 1</a>
+            <br>
+            <a href="#section2" class="section2">Section 2</a>
+            <br>
+            <a href="#section3" class="section3">Section 3</a>
+            <br>
+            <a href="#section4" class="section4"></a>
+        </ul>
+    </nav>
+
+    <!-- Sidebar Toggle Button -->
+    <button class="open-btn" onclick="toggleSidebar()">☰</button>
+
+    <!-- Main Content -->
+        <div class="main-content">
+        <!-- Search Bar -->
+        <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search...">
+        </div>
+
+    <!-- Navigation Links -->
+    <div class="links-container">
+            <a href="#section2">What We Offer</a>
+            <a href="#section3">Sale</a>
+            <a href="#section4">New</a>
+            <a href="#section2">Hot</a>
+            <a href="#section3">Services</a>
+    </div>
+
+    
+        <!-- Example Sections -->
+        <section id="section1" class="section1">
+            <div class="slider-bg">
+                <img src="d143f4a7-b9ad-4965-a766-fa19defd4531.webp" alt="Electrical Equipment" class="img-cover">
+                <div class="overlay">
+                    <h1 class="overlay-text">Welcome to where you can find all the things</h1>
+                </div>
+            </div>
+        </section>
+
+    </head>
+
+    <body>
+
+        <!-- 
+        - #SERVICE
+      -->
+
+      
+        <div class="container">
+      
+          <p class="section-subtitle label-2">Quiity is Esential</p>
+          <h2 class="headline-1 section-title">We Offer Top Notch</h2>
+          <p class="section-text">
+           Salmen Tec offers you anything you need in so many cases you just check and let us do it
+          </p>
+      
+          <div class="grid-layout">
+            <!-- Left Section -->
+            <div class="service-card left-card">
+              <a href="#" class="has-before hover:shine">
+                <figure class="card-banner img-holder">
+                  <img src="istockphoto-985363900-612x612.jpg" loading="lazy" alt="Breakfast" class="img-cover">
+                </figure>
+              </a>
+              
+            </div>
+      
+            <!-- Middle Section -->
+            <div class="service-card middle-card">
+              <a href="#" class="has-before hover:shine">
+                <figure class="card-banner img-holder">
+                  <img src="S2.jpg" loading="lazy" alt="Appetizers" class="img-cover">
+                </figure>
+              </a>
+              
+            </div>
+      
+            <!-- Right Section -->
+            <div class="service-card right-card">
+              <a href="#" class="has-before hover:shine">
+                <figure class="card-banner img-holder">
+                  <img src="electrical-supplies-electric-cables-hanging-on-shelves-hardware-store-interior-bavaria-germany-M9MNXK.jpg" loading="lazy" alt="Drinks" class="img-cover">
+                </figure>
+              </a>
+              
+            </div>
+          </div>
+        </div>
+      
+
+   
+    
+
+
+        <!-- Sale Section -->
+        <section id="section3" class="section3">
+            <h2>On Sale</h2>
+            <div class="scroll-container">
+                <button class="scroll-btn left-btn" onclick="scrollLeft('saleItems')">&#8592;</button>
+                <div class="scroll-items" id="NewItems">
+                    <div class="item">
+                        <div class="item-img-box">
+                            <img src="IMG_4669-removebg.png" alt="New Item 1" class="item-img">
+                        </div>
+                        <div class="item-name-box">
+                            <p class="item-name">New Item 1</p>
+                        </div>
+                        <div class="item-price-box">
+                            <p class="item-price">$10.00</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-img-box">
+                            <img src="IMG_4670-removebg.png" alt="New Item 2" class="item-img">
+                        </div>
+                        <div class="item-name-box">
+                            <p class="item-name">New Item 2</p>
+                        </div>
+                        <div class="item-price-box">
+                            <p class="item-price">$15.00</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-img-box">
+                            <img src="IMG_4671-removebg.png" alt="New Item 3" class="item-img">
+                        </div>
+                        <div class="item-name-box">
+                            <p class="item-name">New Item 3</p>
+                        </div>
+                        <div class="item-price-box">
+                            <p class="item-price">$20.00</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-img-box">
+                            <img src="IMG_4669-removebg.png" alt="New Item 1" class="item-img">
+                        </div>
+                        <div class="item-name-box">
+                            <p class="item-name">New Item 1</p>
+                        </div>
+                        <div class="item-price-box">
+                            <p class="item-price">$10.00</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-img-box">
+                            <img src="IMG_4670-removebg.png" alt="New Item 2" class="item-img">
+                        </div>
+                        <div class="item-name-box">
+                            <p class="item-name">New Item 2</p>
+                        </div>
+                        <div class="item-price-box">
+                            <p class="item-price">$15.00</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-img-box">
+                            <img src="IMG_4671-removebg.png" alt="New Item 3" class="item-img">
+                        </div>
+                        <div class="item-name-box">
+                            <p class="item-name">New Item 3</p>
+                        </div>
+                        <div class="item-price-box">
+                            <p class="item-price">$20.00</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-img-box">
+                            <img src="IMG_4669-removebg.png" alt="New Item 1" class="item-img">
+                        </div>
+                        <div class="item-name-box">
+                            <p class="item-name">New Item 1</p>
+                        </div>
+                        <div class="item-price-box">
+                            <p class="item-price">$10.00</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-img-box">
+                            <img src="IMG_4670-removebg.png" alt="New Item 2" class="item-img">
+                        </div>
+                        <div class="item-name-box">
+                            <p class="item-name">New Item 2</p>
+                        </div>
+                        <div class="item-price-box">
+                            <p class="item-price">$15.00</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-img-box">
+                            <img src="IMG_4671-removebg.png" alt="New Item 3" class="item-img">
+                        </div>
+                        <div class="item-name-box">
+                            <p class="item-name">New Item 3</p>
+                        </div>
+                        <div class="item-price-box">
+                            <p class="item-price">$20.00</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-img-box">
+                            <img src="IMG_4669-removebg.png" alt="New Item 1" class="item-img">
+                        </div>
+                        <div class="item-name-box">
+                            <p class="item-name">New Item 1</p>
+                        </div>
+                        <div class="item-price-box">
+                            <p class="item-price">$10.00</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-img-box">
+                            <img src="IMG_4670-removebg.png" alt="New Item 2" class="item-img">
+                        </div>
+                        <div class="item-name-box">
+                            <p class="item-name">New Item 2</p>
+                        </div>
+                        <div class="item-price-box">
+                            <p class="item-price">$15.00</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-img-box">
+                            <img src="IMG_4671-removebg.png" alt="New Item 3" class="item-img">
+                        </div>
+                        <div class="item-name-box">
+                            <p class="item-name">New Item 3</p>
+                        </div>
+                        <div class="item-price-box">
+                            <p class="item-price">$20.00</p>
+                        </div>
+                    </div>
+                <button class="scroll-btn right-btn" onclick="scrollRight('saleItems')">&#8594;</button>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="about-us-container">
+            <div class="about-us-box">
+              <h2>About Us</h2>
+              <p>ANsd inden n eidn n dein ieddn iin eine ine nid in defdef e f  fe fe </p>
+            </div>
+          </section>
+
+
+        <!-- New Items-->
+
+        <section id="section4" class="section4">
+            <h2>New</h2>
+            <div class="scroll-container">
+                <!-- Left Scroll Button -->
+                <button class="scroll-btn left-btn" onclick="scrollLeft('NewItems')">&#8592;</button>
+        
+                <!-- Scrollable Items -->
+        <div class="scroll-items" id="NewItems">
+            <div class="item">
+                <div class="item-img-box">
+                    <img src="IMG_4669-removebg.png" alt="New Item 1" class="item-img">
+                </div>
+                <div class="item-name-box">
+                    <p class="item-name">New Item 1</p>
+                </div>
+                <div class="item-price-box">
+                    <p class="item-price">$10.00</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-img-box">
+                    <img src="IMG_4670-removebg.png" alt="New Item 2" class="item-img">
+                </div>
+                <div class="item-name-box">
+                    <p class="item-name">New Item 2</p>
+                </div>
+                <div class="item-price-box">
+                    <p class="item-price">$15.00</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-img-box">
+                    <img src="IMG_4671-removebg.png" alt="New Item 3" class="item-img">
+                </div>
+                <div class="item-name-box">
+                    <p class="item-name">New Item 3</p>
+                </div>
+                <div class="item-price-box">
+                    <p class="item-price">$20.00</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-img-box">
+                    <img src="IMG_4669-removebg.png" alt="New Item 1" class="item-img">
+                </div>
+                <div class="item-name-box">
+                    <p class="item-name">New Item 1</p>
+                </div>
+                <div class="item-price-box">
+                    <p class="item-price">$10.00</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-img-box">
+                    <img src="IMG_4670-removebg.png" alt="New Item 2" class="item-img">
+                </div>
+                <div class="item-name-box">
+                    <p class="item-name">New Item 2</p>
+                </div>
+                <div class="item-price-box">
+                    <p class="item-price">$15.00</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-img-box">
+                    <img src="IMG_4671-removebg.png" alt="New Item 3" class="item-img">
+                </div>
+                <div class="item-name-box">
+                    <p class="item-name">New Item 3</p>
+                </div>
+                <div class="item-price-box">
+                    <p class="item-price">$20.00</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-img-box">
+                    <img src="IMG_4669-removebg.png" alt="New Item 1" class="item-img">
+                </div>
+                <div class="item-name-box">
+                    <p class="item-name">New Item 1</p>
+                </div>
+                <div class="item-price-box">
+                    <p class="item-price">$10.00</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-img-box">
+                    <img src="IMG_4670-removebg.png" alt="New Item 2" class="item-img">
+                </div>
+                <div class="item-name-box">
+                    <p class="item-name">New Item 2</p>
+                </div>
+                <div class="item-price-box">
+                    <p class="item-price">$15.00</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-img-box">
+                    <img src="IMG_4671-removebg.png" alt="New Item 3" class="item-img">
+                </div>
+                <div class="item-name-box">
+                    <p class="item-name">New Item 3</p>
+                </div>
+                <div class="item-price-box">
+                    <p class="item-price">$20.00</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-img-box">
+                    <img src="IMG_4669-removebg.png" alt="New Item 1" class="item-img">
+                </div>
+                <div class="item-name-box">
+                    <p class="item-name">New Item 1</p>
+                </div>
+                <div class="item-price-box">
+                    <p class="item-price">$10.00</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-img-box">
+                    <img src="IMG_4670-removebg.png" alt="New Item 2" class="item-img">
+                </div>
+                <div class="item-name-box">
+                    <p class="item-name">New Item 2</p>
+                </div>
+                <div class="item-price-box">
+                    <p class="item-price">$15.00</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-img-box">
+                    <img src="IMG_4671-removebg.png" alt="New Item 3" class="item-img">
+                </div>
+                <div class="item-name-box">
+                    <p class="item-name">New Item 3</p>
+                </div>
+                <div class="item-price-box">
+                    <p class="item-price">$20.00</p>
+                </div>
+            </div>
+        
+                <!-- Right Scroll Button -->
+                <button class="scroll-btn right-btn" onclick="scrollRight('NewItems')">&#8594;</button>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+    <section class="section6" id="section6">
+        <h2>Our Categories</h2>
+        <div class="categories">
+            <div class="category">Category 1</div>
+            <div class="category">Category 2</div>
+            <div class="category">Category 3</div>
+            <div class="category">Category 4</div>
+        </div>
+    </section>
+
+      <!-- Hot Items -->
+
+      <section id="section5" class="section5">
+        <h2>Hot</h2>
+        <div class="scroll-container">
+            <button class="scroll-btn left-btn" onclick="scrollLeft('HotItems')">&#8592;</button>
+            <div class="scroll-items" id="HotItems">
+                <div class="item">Hot Item 1</div>
+                <div class="item">Hot Item 2</div>
+                <div class="item">Hot Item 3</div>
+                <div class="item">Hot Item 4</div>
+                <div class="item">Hot Item 5</div>
+                <div class="item">Hot Item 6</div>
+                <div class="item">Hot Item 7</div>
+                <div class="item">Hot Item 8</div>
+                <div class="item">Hot Item 9</div>
+                <div class="item">Hot Item 10</div>
+                <div class="item">Hot Item 11</div>
+            </div>
+            <button class="scroll-btn right-btn" onclick="scrollRight('HotItems')">&#8594;</button>
+        </div>
+    </section>
+    </div>
+
+    <script src="v.js"></script>
+</body>
+</html>
