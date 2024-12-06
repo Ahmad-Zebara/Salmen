@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    <link rel="stylesheet" href="v.css">
+</head>
+
+
+    <!-- Sidebar -->
+    <nav id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">✖</button>
+        <ul>
+            <a href="#section1" class="section1">Section 1</a>
+            <br>
+            <a href="#section2" class="section2">Section 2</a>
+            <br>
+            <a href="#section3" class="section3">Section 3</a>
+            <br>
+            <a href="#section4" class="section4"></a>
+        </ul>
+    </nav>
+
+    <!-- Sidebar Toggle Button -->
+    <button class="open-btn" onclick="toggleSidebar()">☰</button>
+
+    <!-- Main Content -->
+        <div class="main-content">
+        <!-- Search Bar -->
+        <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search...">
+        </div>
+
+    <!-- Navigation Links -->
+    <div class="links-container">
+            <a href="#section2">What We Offer</a>
+            <a href="#section3">Sale</a>
+            <a href="#section4">New</a>
+            <a href="#section2">Hot</a>
+            <a href="#section3">Services</a>
+    </div>
+
+    
+        <!-- Example Sections -->
+        <section id="section1" class="section1">
+            <div class="slider-bg">
+                <img src="d143f4a7-b9ad-4965-a766-fa19defd4531.webp" alt="Electrical Equipment" class="img-cover">
+                <div class="overlay">
+                    <h1 class="overlay-text">Welcome to where you can find all the things</h1>
+                </div>
+            </div>
+        </section>
+
+    </head>
+
+    <body>
+
+        <!-- 
+        - #SERVICE
+      -->
+
+      
+        <div class="container">
+      
+          <p class="section-subtitle label-2">Quiity is Esential</p>
+          <h2 class="headline-1 section-title">We Offer Top Notch</h2>
+          <p class="section-text">
+           Salmen Tec offers you anything you need in so many cases you just check and let us do it
+          </p>
+      
+          <div class="grid-layout">
+            <!-- Left Section -->
+            <div class="service-card left-card">
+              <a href="#" class="has-before hover:shine">
+                <figure class="card-banner img-holder">
+                  <img src="istockphoto-985363900-612x612.jpg" loading="lazy" alt="Breakfast" class="img-cover">
+                </figure>
+              </a>
+              
+            </div>
+      
+            <!-- Middle Section -->
+            <div class="service-card middle-card">
+              <a href="#" class="has-before hover:shine">
+                <figure class="card-banner img-holder">
+                  <img src="S2.jpg" loading="lazy" alt="Appetizers" class="img-cover">
+                </figure>
+              </a>
+              
+            </div>
+      
+            <!-- Right Section -->
+            <div class="service-card right-card">
+              <a href="#" class="has-before hover:shine">
+                <figure class="card-banner img-holder">
+                  <img src="electrical-supplies-electric-cables-hanging-on-shelves-hardware-store-interior-bavaria-germany-M9MNXK.jpg" loading="lazy" alt="Drinks" class="img-cover">
+                </figure>
+              </a>
+              
+            </div>
+          </div>
+        </div>
+      
+
+   
+    
+
+
+        <!-- Sale Section -->
+        <section id="section3" class="section3">
+            <h2>On Sale</h2>
+            <div class="scroll-container">
+                <button class="scroll-btn left-btn" onclick="scrollLeft('saleItems')">&#8592;</button>
+                <div class="scroll-items" id="NewItems">
+                    <div class="item">
+                        <div class="item-img-box">
+                            <img src="IMG_4669-removebg.png" alt="New Item 1" class="item-img">
+                        </div>
+                        <div class="item-name-box">
+                            <p class="item-name">New Item 1</p>
+                        </div>
+                        <div class="item-price-box">
+                            <p class="item-price">$10.00</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-img-box">
+                            <img src="IMG_4670-removebg.png" alt="New Item 2" class="item-img">
+                        </div>
+                        <div class="item-name-box">
+                            <p class="item-name">New Item 2</p>
+                        </div>
+                        <div class="item-price-box">
+                            <p class="item-price">$15.00</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-img-box">
+                            <img src="IMG_4671-removebg.png" alt="New Item 3" class="item-img">
+                        </div>
+                        <div class="item-name-box">
+                            <p class="item-name">New Item 3</p>
+                        </div>
+                        <div class="item-price-box">
+                            <p class="item-price">$20.00</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-img-box">
+                            <img src="IMG_4669-removebg.png" alt="New Item 1" class="item-img">
+                        </div>
+                        <div class="item-name-box">
+                            <p class="item-name">New Item 1</p>
+                        </div>
+                        <div class="item-price-box">
+                            <p class="item-price">$10.00</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-img-box">
+                            <img src="IMG_4670-removebg.png" alt="New Item 2" class="item-img">
+                        </div>
+                        <div class="item-name-box">
+                            <p class="item-name">New Item 2</p>
+                        </div>
+                        <div class="item-price-box">
+                            <p class="item-price">$15.00</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-img-box">
+                            <img src="IMG_4671-removebg.png" alt="New Item 3" class="item-img">
+                        </div>
+                        <div class="item-name-box">
+                            <p class="item-name">New Item 3</p>
+                        </div>
+                        <div class="item-price-box">
+                            <p class="item-price">$20.00</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-img-box">
+                            <img src="IMG_4669-removebg.png" alt="New Item 1" class="item-img">
+                        </div>
+                        <div class="item-name-box">
+                            <p class="item-name">New Item 1</p>
+                        </div>
+                        <div class="item-price-box">
+                            <p class="item-price">$10.00</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-img-box">
+                            <img src="IMG_4670-removebg.png" alt="New Item 2" class="item-img">
+                        </div>
+                        <div class="item-name-box">
+                            <p class="item-name">New Item 2</p>
+                        </div>
+                        <div class="item-price-box">
+                            <p class="item-price">$15.00</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-img-box">
+                            <img src="IMG_4671-removebg.png" alt="New Item 3" class="item-img">
+                        </div>
+                        <div class="item-name-box">
+                            <p class="item-name">New Item 3</p>
+                        </div>
+                        <div class="item-price-box">
+                            <p class="item-price">$20.00</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-img-box">
+                            <img src="IMG_4669-removebg.png" alt="New Item 1" class="item-img">
+                        </div>
+                        <div class="item-name-box">
+                            <p class="item-name">New Item 1</p>
+                        </div>
+                        <div class="item-price-box">
+                            <p class="item-price">$10.00</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-img-box">
+                            <img src="IMG_4670-removebg.png" alt="New Item 2" class="item-img">
+                        </div>
+                        <div class="item-name-box">
+                            <p class="item-name">New Item 2</p>
+                        </div>
+                        <div class="item-price-box">
+                            <p class="item-price">$15.00</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-img-box">
+                            <img src="IMG_4671-removebg.png" alt="New Item 3" class="item-img">
+                        </div>
+                        <div class="item-name-box">
+                            <p class="item-name">New Item 3</p>
+                        </div>
+                        <div class="item-price-box">
+                            <p class="item-price">$20.00</p>
+                        </div>
+                    </div>
+                <button class="scroll-btn right-btn" onclick="scrollRight('saleItems')">&#8594;</button>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="about-us-container">
+            <div class="about-us-box">
+              <h2>About Us</h2>
+              <p>ANsd inden n eidn n dein ieddn iin eine ine nid in defdef e f  fe fe </p>
+            </div>
+          </section>
+
+
+        <!-- New Items-->
+
+        <section id="section4" class="section4">
+            <h2>New</h2>
+            <div class="scroll-container">
+                <!-- Left Scroll Button -->
+                <button class="scroll-btn left-btn" onclick="scrollLeft('NewItems')">&#8592;</button>
+        
+                <!-- Scrollable Items -->
+        <div class="scroll-items" id="NewItems">
+            <div class="item">
+                <div class="item-img-box">
+                    <img src="IMG_4669-removebg.png" alt="New Item 1" class="item-img">
+                </div>
+                <div class="item-name-box">
+                    <p class="item-name">New Item 1</p>
+                </div>
+                <div class="item-price-box">
+                    <p class="item-price">$10.00</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-img-box">
+                    <img src="IMG_4670-removebg.png" alt="New Item 2" class="item-img">
+                </div>
+                <div class="item-name-box">
+                    <p class="item-name">New Item 2</p>
+                </div>
+                <div class="item-price-box">
+                    <p class="item-price">$15.00</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-img-box">
+                    <img src="IMG_4671-removebg.png" alt="New Item 3" class="item-img">
+                </div>
+                <div class="item-name-box">
+                    <p class="item-name">New Item 3</p>
+                </div>
+                <div class="item-price-box">
+                    <p class="item-price">$20.00</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-img-box">
+                    <img src="IMG_4669-removebg.png" alt="New Item 1" class="item-img">
+                </div>
+                <div class="item-name-box">
+                    <p class="item-name">New Item 1</p>
+                </div>
+                <div class="item-price-box">
+                    <p class="item-price">$10.00</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-img-box">
+                    <img src="IMG_4670-removebg.png" alt="New Item 2" class="item-img">
+                </div>
+                <div class="item-name-box">
+                    <p class="item-name">New Item 2</p>
+                </div>
+                <div class="item-price-box">
+                    <p class="item-price">$15.00</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-img-box">
+                    <img src="IMG_4671-removebg.png" alt="New Item 3" class="item-img">
+                </div>
+                <div class="item-name-box">
+                    <p class="item-name">New Item 3</p>
+                </div>
+                <div class="item-price-box">
+                    <p class="item-price">$20.00</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-img-box">
+                    <img src="IMG_4669-removebg.png" alt="New Item 1" class="item-img">
+                </div>
+                <div class="item-name-box">
+                    <p class="item-name">New Item 1</p>
+                </div>
+                <div class="item-price-box">
+                    <p class="item-price">$10.00</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-img-box">
+                    <img src="IMG_4670-removebg.png" alt="New Item 2" class="item-img">
+                </div>
+                <div class="item-name-box">
+                    <p class="item-name">New Item 2</p>
+                </div>
+                <div class="item-price-box">
+                    <p class="item-price">$15.00</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-img-box">
+                    <img src="IMG_4671-removebg.png" alt="New Item 3" class="item-img">
+                </div>
+                <div class="item-name-box">
+                    <p class="item-name">New Item 3</p>
+                </div>
+                <div class="item-price-box">
+                    <p class="item-price">$20.00</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-img-box">
+                    <img src="IMG_4669-removebg.png" alt="New Item 1" class="item-img">
+                </div>
+                <div class="item-name-box">
+                    <p class="item-name">New Item 1</p>
+                </div>
+                <div class="item-price-box">
+                    <p class="item-price">$10.00</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-img-box">
+                    <img src="IMG_4670-removebg.png" alt="New Item 2" class="item-img">
+                </div>
+                <div class="item-name-box">
+                    <p class="item-name">New Item 2</p>
+                </div>
+                <div class="item-price-box">
+                    <p class="item-price">$15.00</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-img-box">
+                    <img src="IMG_4671-removebg.png" alt="New Item 3" class="item-img">
+                </div>
+                <div class="item-name-box">
+                    <p class="item-name">New Item 3</p>
+                </div>
+                <div class="item-price-box">
+                    <p class="item-price">$20.00</p>
+                </div>
+            </div>
+        
+                <!-- Right Scroll Button -->
+                <button class="scroll-btn right-btn" onclick="scrollRight('NewItems')">&#8594;</button>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+    <section class="section6" id="section6">
+        <h2>Our Categories</h2>
+        <div class="categories">
+            <div class="category">Category 1</div>
+            <div class="category">Category 2</div>
+            <div class="category">Category 3</div>
+            <div class="category">Category 4</div>
+        </div>
+    </section>
+
+      <!-- Hot Items -->
+
+      <section id="section5" class="section5">
+        <h2>Hot</h2>
+        <div class="scroll-container">
+            <button class="scroll-btn left-btn" onclick="scrollLeft('HotItems')">&#8592;</button>
+            <div class="scroll-items" id="HotItems">
+                <div class="item">Hot Item 1</div>
+                <div class="item">Hot Item 2</div>
+                <div class="item">Hot Item 3</div>
+                <div class="item">Hot Item 4</div>
+                <div class="item">Hot Item 5</div>
+                <div class="item">Hot Item 6</div>
+                <div class="item">Hot Item 7</div>
+                <div class="item">Hot Item 8</div>
+                <div class="item">Hot Item 9</div>
+                <div class="item">Hot Item 10</div>
+                <div class="item">Hot Item 11</div>
+            </div>
+            <button class="scroll-btn right-btn" onclick="scrollRight('HotItems')">&#8594;</button>
+        </div>
+    </section>
+    </div>
+
+    <script src="v.js"></script>
+</body>
+</html>
